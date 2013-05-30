@@ -15,6 +15,7 @@
 
 @implementation ResultViewController
 @synthesize result;
+@synthesize yourHand;
 @synthesize cpuHand;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -31,21 +32,30 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 
+    // 結果の表示
     switch (result) {
         case -1:
             self.resultLabel.text = @"負けました";
+            self.resultLabel.textColor = [UIColor redColor];
             break;
         case 0:
             self.resultLabel.text = @"引き分けです";
+            self.resultLabel.textColor = [UIColor greenColor];
             break;
         case 1:
             self.resultLabel.text = @"勝ちました";
+            self.resultLabel.textColor = [UIColor blueColor];
             break;
             
         default:
             break;
     }
     
+    // プレイヤーとCPUの手を表示
+    self.yourHandImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"janken_%@", self.yourHand]];
+    self.cpuHandImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"janken_%@", self.cpuHand]];
+    
+    // 成績の表示
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     [appDelegate setRecordLabel:self.recordLabel];
 

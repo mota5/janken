@@ -45,10 +45,13 @@
         return;
     }
     
+    NSString *yourHand = [segue identifier];
+    NSString *cpuHand = @"";
+    
+
+    // CPUの手を決める
     srand(time(nil));
     int val = rand() % 3;
-    
-    NSString *cpuHand = @"";
     
     switch (val) {
         case 0:
@@ -64,9 +67,10 @@
             break;
     }
     
+    // 対戦結果を判定
     int result = 0;
     
-    if([[segue identifier] isEqualToString:@"gu"]){
+    if([yourHand isEqualToString:@"gu"]){
         if([cpuHand isEqualToString:@"gu"]){
             result = 0;
         }else if([cpuHand isEqualToString:@"cho"]){
@@ -74,7 +78,7 @@
         }else if([cpuHand isEqualToString:@"pa"]){
             result = -1;
         }
-    } else if([[segue identifier] isEqualToString:@"cho"]){
+    } else if([yourHand isEqualToString:@"cho"]){
         if([cpuHand isEqualToString:@"gu"]){
             result = -1;
         }else if([cpuHand isEqualToString:@"cho"]){
@@ -82,7 +86,7 @@
         }else if([cpuHand isEqualToString:@"pa"]){
             result = 1;
         }
-    } else if([[segue identifier] isEqualToString:@"pa"]){
+    } else if([yourHand isEqualToString:@"pa"]){
         if([cpuHand isEqualToString:@"gu"]){
             result = 1;
         }else if([cpuHand isEqualToString:@"cho"]){
@@ -92,7 +96,7 @@
         }
     }
     
-    
+    // 結果を保存する
     NSUserDefaults *data = [NSUserDefaults standardUserDefaults];
     
     switch (result) {
@@ -108,8 +112,10 @@
         default:
             break;
     }
+    
     ResultViewController *resultViewController = segue.destinationViewController;
     resultViewController.result = result;
+    resultViewController.yourHand = yourHand;
     resultViewController.cpuHand = cpuHand;
 }
 
