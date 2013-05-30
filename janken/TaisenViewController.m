@@ -8,6 +8,7 @@
 
 #import "TaisenViewController.h"
 #import "ResultViewController.h"
+#import "AppDelegate.h"
 
 @interface TaisenViewController ()
 
@@ -28,11 +29,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    NSUserDefaults *data = [NSUserDefaults standardUserDefaults];
-    NSInteger win = [data integerForKey:@"win"];
-    NSInteger even = [data integerForKey:@"even"];
-    NSInteger lose = [data integerForKey:@"lose"];
-    self.recordLabel.text = [NSString stringWithFormat:@"%d勝%d負%d引き分け", win, lose, even];
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    [appDelegate setRecordLabel:self.recordLabel];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,6 +40,10 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if([segue identifier] == nil){
+        return;
+    }
     
     srand(time(nil));
     int val = rand() % 3;
@@ -106,14 +108,25 @@
         default:
             break;
     }
-    ResultViewController *resultViewController = (ResultViewController *)segue.destinationViewController;
+    ResultViewController *resultViewController = segue.destinationViewController;
     resultViewController.result = result;
     resultViewController.cpuHand = cpuHand;
 }
 
 - (IBAction)returnTaisenView:(UIStoryboardSegue *)segue {
-    [self viewDidLoad];
+
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    [appDelegate setRecordLabel:self.recordLabel];
+    
 }
 
+
+//- (void)setRecordLabel:(UILabel *)label {
+//    NSUserDefaults *data = [NSUserDefaults standardUserDefaults];
+//    NSInteger win = [data integerForKey:@"win"];
+//    NSInteger even = [data integerForKey:@"even"];
+//    NSInteger lose = [data integerForKey:@"lose"];
+//    label.text = [NSString stringWithFormat:@"%d勝%d負%d引き分け", win, lose, even];
+//}
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "ResultViewController.h"
+#import "AppDelegate.h"
 
 @interface ResultViewController ()
 
@@ -45,13 +46,15 @@
             break;
     }
     
-    
-    // TODO: このメソッドは共通化したい
-    NSUserDefaults *data = [NSUserDefaults standardUserDefaults];
-    NSInteger win = [data integerForKey:@"win"];
-    NSInteger even = [data integerForKey:@"even"];
-    NSInteger lose = [data integerForKey:@"lose"];
-    self.recordLabel.text = [NSString stringWithFormat:@"%d勝%d負%d引き分け", win, lose, even];
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    [appDelegate setRecordLabel:self.recordLabel];
+
+//    // TODO: このメソッドは共通化したい
+//    NSUserDefaults *data = [NSUserDefaults standardUserDefaults];
+//    NSInteger win = [data integerForKey:@"win"];
+//    NSInteger even = [data integerForKey:@"even"];
+//    NSInteger lose = [data integerForKey:@"lose"];
+//    self.recordLabel.text = [NSString stringWithFormat:@"%d勝%d負%d引き分け", win, lose, even];
 }
 
 - (void)didReceiveMemoryWarning

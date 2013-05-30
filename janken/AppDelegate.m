@@ -43,4 +43,13 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+- (void)setRecordLabel:(UILabel *)label {
+    NSUserDefaults *data = [NSUserDefaults standardUserDefaults];
+    NSInteger win = [data integerForKey:@"win"];
+    NSInteger even = [data integerForKey:@"even"];
+    NSInteger lose = [data integerForKey:@"lose"];
+    label.text = [NSString stringWithFormat:@"%d勝%d負%d引き分け", win, lose, even];
+}
+
 @end

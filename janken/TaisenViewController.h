@@ -11,4 +11,6 @@
 @interface TaisenViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *recordLabel;
 
+//- (void)setRecordLabel:(UILabel *)label;
+
 @end

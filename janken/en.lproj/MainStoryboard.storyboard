@@ -88,8 +88,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caS-oD-VXq">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="Hqk-aY-00D"/>
-                                    <constraint firstAttribute="width" constant="73" id="Y3d-Je-gUX"/>
+                                    <constraint firstAttribute="width" constant="75" id="lXZ-aS-ShD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Button" image="janken_gu.png">
@@ -105,7 +104,8 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kao-xd-ux5">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="73" id="nwA-r0-H09"/>
+                                    <constraint firstAttribute="height" constant="99" id="8pA-jf-dXZ"/>
+                                    <constraint firstAttribute="width" constant="75" id="GM9-PI-4iM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Button" image="janken_cho.png">
@@ -121,7 +121,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNx-7t-bKP">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="73" id="4Xx-gz-9b1"/>
+                                    <constraint firstAttribute="width" constant="75" id="hlb-3A-AKt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Button" image="janken_pa.png">
@@ -138,19 +138,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="YrN-7P-i7J" firstAttribute="centerX" secondItem="oSw-tx-N2D" secondAttribute="centerX" type="default" id="2G4-td-QiB"/>
                             <constraint firstItem="dNx-7t-bKP" firstAttribute="top" secondItem="kao-xd-ux5" secondAttribute="top" type="default" id="2v1-tN-Ow3"/>
+                            <constraint firstItem="YrN-7P-i7J" firstAttribute="centerX" secondItem="j1d-nE-fn2" secondAttribute="centerX" type="default" id="3kX-LD-rLF"/>
+                            <constraint firstItem="dNx-7t-bKP" firstAttribute="bottom" secondItem="kao-xd-ux5" secondAttribute="bottom" type="default" id="6vX-FH-hat"/>
                             <constraint firstItem="oSw-tx-N2D" firstAttribute="centerX" secondItem="oo3-hu-Sgr" secondAttribute="centerX" type="default" id="7QC-dQ-kwn"/>
-                            <constraint firstItem="kao-xd-ux5" firstAttribute="centerX" secondItem="YrN-7P-i7J" secondAttribute="centerX" type="default" id="7iW-RM-H36"/>
                             <constraint firstItem="YrN-7P-i7J" firstAttribute="top" secondItem="j1d-nE-fn2" secondAttribute="top" constant="128" id="7wv-7t-wCb"/>
                             <constraint firstItem="kao-xd-ux5" firstAttribute="top" secondItem="caS-oD-VXq" secondAttribute="top" type="default" id="8JS-Q8-t1g"/>
                             <constraint firstAttribute="bottom" secondItem="oSw-tx-N2D" secondAttribute="bottom" constant="178" id="BXb-BZ-xH1"/>
-                            <constraint firstAttribute="trailing" secondItem="dNx-7t-bKP" secondAttribute="trailing" constant="29" id="J0G-zi-2wD"/>
-                            <constraint firstItem="kao-xd-ux5" firstAttribute="bottom" secondItem="caS-oD-VXq" secondAttribute="bottom" type="default" id="Rs4-7y-5aL"/>
-                            <constraint firstItem="oo3-hu-Sgr" firstAttribute="centerX" secondItem="j1d-nE-fn2" secondAttribute="centerX" type="default" id="Sgg-Br-7OU"/>
-                            <constraint firstItem="dNx-7t-bKP" firstAttribute="bottom" secondItem="kao-xd-ux5" secondAttribute="bottom" type="default" id="WWg-nN-PaZ"/>
+                            <constraint firstItem="kao-xd-ux5" firstAttribute="bottom" secondItem="caS-oD-VXq" secondAttribute="bottom" type="default" id="NuT-2y-WDb"/>
+                            <constraint firstItem="kao-xd-ux5" firstAttribute="leading" secondItem="j1d-nE-fn2" secondAttribute="leading" constant="124" id="YSU-Ub-evL"/>
+                            <constraint firstAttribute="trailing" secondItem="dNx-7t-bKP" secondAttribute="trailing" constant="27" id="Z7S-B8-NLK"/>
+                            <constraint firstItem="caS-oD-VXq" firstAttribute="leading" secondItem="j1d-nE-fn2" secondAttribute="leading" constant="35" id="chc-fm-XtZ"/>
                             <constraint firstAttribute="bottom" secondItem="oo3-hu-Sgr" secondAttribute="bottom" constant="57" id="jGg-Wb-njz"/>
-                            <constraint firstItem="kao-xd-ux5" firstAttribute="centerX" secondItem="oSw-tx-N2D" secondAttribute="centerX" type="default" id="kH5-pQ-5Kj"/>
-                            <constraint firstItem="caS-oD-VXq" firstAttribute="leading" secondItem="j1d-nE-fn2" secondAttribute="leading" constant="35" id="lIO-Pv-Ihg"/>
                             <constraint firstItem="caS-oD-VXq" firstAttribute="top" secondItem="j1d-nE-fn2" secondAttribute="top" constant="193" id="mZc-ZT-iAQ"/>
                         </constraints>
                     </view>
