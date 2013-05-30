@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzv-1g-U8J">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="続きから">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="0f8-5j-sbM" kind="modal" identifier="tsuduki" id="xUI-k2-zvt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dm6-0E-69r">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="はじめから">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="0f8-5j-sbM" kind="modal" identifier="hajime" id="Orr-dS-Lxb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yzv-1g-U8J" firstAttribute="leading" secondItem="dm6-0E-69r" secondAttribute="leading" type="default" id="8ac-j0-heP"/>
+                            <constraint firstItem="dm6-0E-69r" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="Hj0-4b-oIS"/>
+                            <constraint firstItem="yzv-1g-U8J" firstAttribute="top" secondItem="3" secondAttribute="top" constant="165" id="Yf6-LE-M0G"/>
+                            <constraint firstAttribute="bottom" secondItem="dm6-0E-69r" secondAttribute="bottom" constant="154" id="oSC-hZ-XCN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tsudukiBtn" destination="yzv-1g-U8J" id="hj3-G2-sxB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-85" y="-225"/>
+        </scene>
+        <!--Taisen View Controller-->
+        <scene sceneID="9su-JP-LwI">
+            <objects>
+                <viewController id="0f8-5j-sbM" customClass="TaisenViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j1d-nE-fn2">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="選択してね" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YrN-7P-i7J">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oo3-hu-Sgr">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="戻る">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="jiy-Vq-5K0" kind="unwind" unwindAction="returnView:" id="0V8-xq-JHT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="record" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSw-tx-N2D">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caS-oD-VXq">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="Hqk-aY-00D"/>
+                                    <constraint firstAttribute="width" constant="73" id="Y3d-Je-gUX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button" image="janken_gu.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="VWl-xH-oXC" kind="modal" identifier="gu" modalTransitionStyle="flipHorizontal" id="6H7-WV-oPJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kao-xd-ux5">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="nwA-r0-H09"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button" image="janken_cho.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="VWl-xH-oXC" kind="modal" identifier="cho" modalTransitionStyle="flipHorizontal" id="7D0-5L-skd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNx-7t-bKP">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="4Xx-gz-9b1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button" image="janken_pa.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="VWl-xH-oXC" kind="modal" identifier="pa" modalTransitionStyle="flipHorizontal" id="r11-ih-D5b"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dNx-7t-bKP" firstAttribute="top" secondItem="kao-xd-ux5" secondAttribute="top" type="default" id="2v1-tN-Ow3"/>
+                            <constraint firstItem="oSw-tx-N2D" firstAttribute="centerX" secondItem="oo3-hu-Sgr" secondAttribute="centerX" type="default" id="7QC-dQ-kwn"/>
+                            <constraint firstItem="kao-xd-ux5" firstAttribute="centerX" secondItem="YrN-7P-i7J" secondAttribute="centerX" type="default" id="7iW-RM-H36"/>
+                            <constraint firstItem="YrN-7P-i7J" firstAttribute="top" secondItem="j1d-nE-fn2" secondAttribute="top" constant="128" id="7wv-7t-wCb"/>
+                            <constraint firstItem="kao-xd-ux5" firstAttribute="top" secondItem="caS-oD-VXq" secondAttribute="top" type="default" id="8JS-Q8-t1g"/>
+                            <constraint firstAttribute="bottom" secondItem="oSw-tx-N2D" secondAttribute="bottom" constant="178" id="BXb-BZ-xH1"/>
+                            <constraint firstAttribute="trailing" secondItem="dNx-7t-bKP" secondAttribute="trailing" constant="29" id="J0G-zi-2wD"/>
+                            <constraint firstItem="kao-xd-ux5" firstAttribute="bottom" secondItem="caS-oD-VXq" secondAttribute="bottom" type="default" id="Rs4-7y-5aL"/>
+                            <constraint firstItem="oo3-hu-Sgr" firstAttribute="centerX" secondItem="j1d-nE-fn2" secondAttribute="centerX" type="default" id="Sgg-Br-7OU"/>
+                            <constraint firstItem="dNx-7t-bKP" firstAttribute="bottom" secondItem="kao-xd-ux5" secondAttribute="bottom" type="default" id="WWg-nN-PaZ"/>
+                            <constraint firstAttribute="bottom" secondItem="oo3-hu-Sgr" secondAttribute="bottom" constant="57" id="jGg-Wb-njz"/>
+                            <constraint firstItem="kao-xd-ux5" firstAttribute="centerX" secondItem="oSw-tx-N2D" secondAttribute="centerX" type="default" id="kH5-pQ-5Kj"/>
+                            <constraint firstItem="caS-oD-VXq" firstAttribute="leading" secondItem="j1d-nE-fn2" secondAttribute="leading" constant="35" id="lIO-Pv-Ihg"/>
+                            <constraint firstItem="caS-oD-VXq" firstAttribute="top" secondItem="j1d-nE-fn2" secondAttribute="top" constant="193" id="mZc-ZT-iAQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="recordLabel" destination="oSw-tx-N2D" id="6Gr-9d-pKZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o95-zD-pHp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="jiy-Vq-5K0" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="422" y="-232"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="T1o-W3-Cna">
+            <objects>
+                <viewController id="VWl-xH-oXC" customClass="ResultViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oTN-HO-nfT">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="結果" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0W-Ws-Fuz">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="勝ち負け表示" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQw-YO-SvV">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="record" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hci-KH-WO3">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTB-wW-Tpa">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="もう一度やる">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hBP-Dr-uPi" kind="unwind" unwindAction="returnTaisenView:" id="pyH-k7-bEn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYG-3J-ktO">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="やめる">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hBP-Dr-uPi" kind="unwind" unwindAction="returnView:" id="e9s-Fb-s7z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yTB-wW-Tpa" firstAttribute="centerX" secondItem="hci-KH-WO3" secondAttribute="centerX" type="default" id="2ka-55-WWN"/>
+                            <constraint firstAttribute="bottom" secondItem="rYG-3J-ktO" secondAttribute="bottom" constant="57" id="8mW-vC-qWp"/>
+                            <constraint firstAttribute="bottom" secondItem="hci-KH-WO3" secondAttribute="bottom" constant="232" id="CrV-w6-9qq"/>
+                            <constraint firstAttribute="bottom" secondItem="yTB-wW-Tpa" secondAttribute="bottom" constant="127" id="UqA-6y-HTr"/>
+                            <constraint firstItem="T0W-Ws-Fuz" firstAttribute="top" secondItem="oTN-HO-nfT" secondAttribute="top" constant="55" id="eYB-gq-hBG"/>
+                            <constraint firstItem="rYG-3J-ktO" firstAttribute="centerX" secondItem="yTB-wW-Tpa" secondAttribute="centerX" type="default" id="eg5-CI-KLR"/>
+                            <constraint firstItem="SQw-YO-SvV" firstAttribute="top" secondItem="oTN-HO-nfT" secondAttribute="top" constant="107" id="el9-vh-hAW"/>
+                            <constraint firstItem="rYG-3J-ktO" firstAttribute="centerX" secondItem="oTN-HO-nfT" secondAttribute="centerX" type="default" id="gDJ-GC-XCs"/>
+                            <constraint firstItem="SQw-YO-SvV" firstAttribute="centerX" secondItem="T0W-Ws-Fuz" secondAttribute="centerX" type="default" id="plg-Rv-9SC"/>
+                            <constraint firstItem="hci-KH-WO3" firstAttribute="centerX" secondItem="SQw-YO-SvV" secondAttribute="centerX" type="default" id="yLg-3e-Qle"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="recordLabel" destination="hci-KH-WO3" id="eBP-yh-ETd"/>
+                        <outlet property="resultLabel" destination="SQw-YO-SvV" id="XNy-id-QFX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yb1-j9-9H5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="hBP-Dr-uPi" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="988" y="-214"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="janken_cho.png" width="150" height="200"/>
+        <image name="janken_gu.png" width="150" height="200"/>
+        <image name="janken_pa.png" width="150" height="200"/>
+    </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ResultViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ResultViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="recordLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="TaisenViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TaisenViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="returnTaisenView:" candidateClass="UIStoryboardSegue"/>
+                <relationship kind="outlet" name="recordLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="UIStoryboardSegue" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIStoryboardSegue.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="returnView:" candidateClass="UIStoryboardSegue"/>
+                <relationship kind="outlet" name="tsudukiBtn" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="xUI-k2-zvt"/>
+        <segue reference="6H7-WV-oPJ"/>
+    </inferredMetricsTieBreakers>
+</document>
